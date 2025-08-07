@@ -1,0 +1,234 @@
+
+/*08/06/25
+Removed excess styles - backup b4 (080525) in archives folder
+RESPONSIVE LAYOUT NEEDS WORK - MORE LEVELS?*/
+
+/*global fonts*/
+@font-face {
+        font-family: "Script"; /* Choose a name for your font */
+        src: url("fonts/\SCRIPTBL.TTF") format("truetype"); /* Specify the path to your .ttf file and its format */
+        font-weight: normal; /* Optional: Define font weight if applicable */
+        font-style: normal; /* Optional: Define font style if applicable */
+    }
+
+
+@font-face {
+        font-family: "Times_Roman"; 
+        src: url("fonts/\times.ttf") format("truetype"); 
+        font-weight: normal; 
+        font-style: normal; 
+    }
+
+
+/*page body - all pages*/   
+body { 
+  background-image: url(images/1Apage/craft2.png);     
+  margin: 0;
+  font-family: "Times_Roman";
+  /*overflow-y: hidden;*/
+}
+
+
+ul, li {                /*links to gallery pages*/
+  padding: 0;
+  list-style-type: none;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+a:hover{ 
+    font-size: 14px;
+    font-weight: bold;   
+    color: deeppink; 
+}
+
+
+.grid-container {       /*main page grid*/
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  column-gap: 30px;
+}
+
+
+header {              /* page header logo - all pages*/
+  margin: 0;
+  display: grid;
+  grid-column: span 3;
+  justify-content: center;  
+  align-content: center;
+  border-bottom: 1px solid #423f3f;
+  font-family:"Script";
+  font-size: 1.5em;
+  text-shadow:
+    0 0 1px #FFFFFF,
+    0 0 1em #FF69B4,
+    0 0 1em #FF2200;
+  /*color: #106083;*/ 
+}
+
+
+section {                 /*area for video*/
+  display:grid;
+  justify-content: center;
+  align-content: center;
+  height:60vh;
+  width: auto;
+  margin-top: 5px;			
+  background-position: center;
+  background-repeat: no-repeat;	  	
+}
+
+
+.banner{                  /*text above video*/
+  font-size: 2em;
+  text-align: center;
+}
+
+
+video{                  /*video alignment and clip path*/
+  display: block;
+  margin: auto;
+  clip-path: polygon(16% 0, 84% 0, 84% 100%, 16% 100%);
+}
+
+
+nav {
+  padding: 30px;
+  border-right: 1px solid #ddd;
+}
+
+
+nav li {
+  /*text-decoration: none;*/
+  list-style-type: "\1F33B"; /* Now is \01F4CD pushpin \1F449 hand emoji*/
+}
+
+
+article {
+  padding: 5px;
+}
+
+
+
+aside {
+  padding: 30px;
+  border-left: 1px solid #ddd;
+}
+
+
+/*Gallery Pages*/
+/*text under logo*/
+
+h1 p{
+  font-family: Times_Roman;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+
+/*heading above images*/
+article h2 {
+  font-size: 1em;
+  text-align: center;
+}
+
+
+/*box wrapper*/
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(25, 200px);
+  grid-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+
+.box {
+  border: 1px solid #000;
+  border-radius: 5px;  
+}
+
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.box:hover{
+  scale: 1.5;  
+}  
+
+
+/* responsive  setup  NEEDS WORK - MAY NEED A FEW @media FOR DIFFERENT INCREMENTS*/
+@media screen and (max-width: 1200px) {
+  nav {
+    grid-column: span 3;
+    border-right: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  article {
+    grid-column: span 2;
+  }
+  aside {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  nav, article, aside {
+    grid-column: span 3;
+  }
+
+
+  aside {
+    border-left: 0;
+    border-top: 1px solid #ddd;
+  }
+
+
+  article h2 {
+    font-size: 2.5em;
+  }
+
+
+  article img {  
+    padding-left: 10%; 
+  }
+  
+
+  .wrapper {
+  max-width: 600px;  
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 200px);
+  grid-gap: 10px;  
+}
+
+
+video{
+  height: 200px;
+}
+
+
+.box{
+  height: 50%;
+  width: 50%;
+}
+
+}
+
