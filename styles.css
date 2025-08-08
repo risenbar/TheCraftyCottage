@@ -26,32 +26,32 @@ body {
   margin: 0;
   font-family: "Times_Roman";
   /*overflow-y: hidden;*/
-}
+  }
 
 
 ul, li {                /*links to gallery pages*/
   padding: 0;
   list-style-type: none;
-}
+  }
 
 
 a {
   text-decoration: none;
-}
+  }
 
 
 a:hover{ 
     font-size: 14px;
     font-weight: bold;   
     color: deeppink; 
-}
+  }
 
 
 .grid-container {       /*main page grid*/
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   column-gap: 30px;
-}
+  }
 
 
 header {              /* page header logo - all pages*/
@@ -68,7 +68,7 @@ header {              /* page header logo - all pages*/
     0 0 1em #FF69B4,
     0 0 1em #FF2200;
   /*color: #106083;*/ 
-}
+  }
 
 
 section {                 /*area for video*/
@@ -80,43 +80,43 @@ section {                 /*area for video*/
   margin-top: 5px;			
   background-position: center;
   background-repeat: no-repeat;	  	
-}
+  }
 
 
 .banner{                  /*text above video*/
   font-size: 2em;
   text-align: center;
-}
+  }
 
 
 video{                  /*video alignment and clip path*/
   display: block;
   margin: auto;
   clip-path: polygon(16% 0, 84% 0, 84% 100%, 16% 100%);
-}
+  }
 
 
 nav {
   padding: 30px;
   border-right: 1px solid #ddd;
-}
+  }
 
 
 nav li {
   /*text-decoration: none;*/
   list-style-type: "\1F33B"; /* Now is \01F4CD pushpin \1F449 hand emoji*/
-}
+  }
 
 
 article {
   padding: 5px;
-}
+  }
 
 
 aside {
   padding: 30px;
   border-left: 1px solid #ddd;
-}
+  }
 
 
 /*Gallery Pages*/
@@ -127,14 +127,14 @@ h1 p{
   font-size: 20px;
   text-align: center;
   margin: 0;
-}
+  }
 
 
 /*heading above images*/
 article h2 {
   font-size: 1em;
   text-align: center;
-}
+  }
 
 
 /*box wrapper*/
@@ -147,25 +147,25 @@ article h2 {
   grid-gap: 20px;
   justify-items: stretch;
   align-items: stretch;
-}
+  }
 
 
 .box {
   border: 1px solid #000;
   border-radius: 5px;  
-}
+  }
 
 
 .box img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
+  }
 
 
 .box:hover{
   scale: 1.5;  
-}  
+  }  
 
 
 /* responsive  setup  NEEDS WORK - MAY NEED A FEW @media FOR DIFFERENT INCREMENTS*/
@@ -216,12 +216,12 @@ article h2 {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(25, 200px);
   grid-gap: 10px;  
-}
+  }
 
 
 video{
   height: 200px;
-}
+  }
 
 
 .box{
@@ -230,39 +230,38 @@ video{
 
   .box:hover{
   scale: 1.2; 
-}
-}
+    }
+  }
 
 }
 @media screen and (max-width: 580px) {
 
   nav {
   font-size: 1.1em;
-}
+  }
 
   .banner{                  /*text above video*/
   font-size: 1.5em;
   text-align: center;
-}
+  }
 
 aside{
  font-size: 1.1em;
-}
+  }
 
  .wrapper {
   max-width: 400px; 
-  display: block; 
-  /*grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(25, 200px);
-  grid-gap: 10px;*/  
-}
+  display: block;  
+  }
 
 .box{
   height: 60%;
   width: 60%;
-}
+  margin-left: 40px;
+  }
 
 .box:hover{
   scale: 1.0;  
-}  
+  } 
+
 }
