@@ -113,7 +113,6 @@ article {
 }
 
 
-
 aside {
   padding: 30px;
   border-left: 1px solid #ddd;
@@ -190,7 +189,7 @@ article h2 {
   }
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 990px) {
   nav, article, aside {
     grid-column: span 3;
   }
@@ -214,8 +213,8 @@ article h2 {
 
   .wrapper {
   max-width: 600px;  
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(7, 200px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(25, 200px);
   grid-gap: 10px;  
 }
 
@@ -226,9 +225,44 @@ video{
 
 
 .box{
-  height: 50%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
+
+  .box:hover{
+  scale: 1.2; 
+}
 }
 
 }
+@media screen and (max-width: 580px) {
 
+  nav {
+  font-size: 1.1em;
+}
+
+  .banner{                  /*text above video*/
+  font-size: 1.5em;
+  text-align: center;
+}
+
+aside{
+ font-size: 1.1em;
+}
+
+ .wrapper {
+  max-width: 400px; 
+  display: block; 
+  /*grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(25, 200px);
+  grid-gap: 10px;*/  
+}
+
+.box{
+  height: 60%;
+  width: 60%;
+}
+
+.box:hover{
+  scale: 1.0;  
+}  
+}
