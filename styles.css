@@ -244,13 +244,14 @@ video{
 }
 @media screen and (max-width: 580px) {
 
-header {              /* page header logo - all pages*/ 
+/* page header logo - all pages not used yet - logo class removed from index
+header {             
     font-size: 0.75em;  
   }
 
   .logo{
     max-height: 30%;
-  }
+  }*/
   
   nav {
     font-size: 1.1em;
