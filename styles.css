@@ -255,15 +255,19 @@ video{
 
 /* page header logo - all pages not used yet - logo class removed from index*/
 header {             
-    font-size: 0.75em;  
+    font-size: 0.7em;  
   }
 
-  /*.logo{
-    max-height: 30%;
-  }*/
+  h1 p{
+    font-size: 0.7em;
+  }
+
+  .logo{
+    max-height: 40%;
+  }
 
   span p{
-  font-size: 1em;  
+  font-size: 0.7em;  
 }
   
   nav {
