@@ -87,11 +87,16 @@ section {                 /*area for video*/
   text-align: center;
   }
 
+span p{
+  font-size: 1.5em;
+  text-align: center;
+}
+
 
 video{                  /*video alignment and clip path*/
   display: block;
   margin: auto;
-  clip-path: polygon(16% 0, 84% 0, 84% 100%, 16% 100%);
+  /*clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);*/
   }
 
 
