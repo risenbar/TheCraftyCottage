@@ -24,6 +24,7 @@ body {
   background-image: url(images/1Apage/craft2.png);     
   margin: 0;
   font-family: "Times_Roman";
+  font-size: 1.2em;
   /*overflow-y: hidden;*/
   }
 
@@ -40,7 +41,7 @@ a {
 
 
 a:hover{ 
-    font-size: 14px;
+    font-size: 1.1em;
     font-weight: bold;   
     color: deeppink; 
   }
@@ -88,14 +89,14 @@ section {                 /*area for video*/
   }
 
 span p{
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
 }
 
 
 video{                  /*video alignment and clip path*/
   display: block;
-  margin: auto;
+  margin: 0;
   /*clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);*/
   }
 
@@ -113,7 +114,7 @@ nav li {
 
 
 article {
-  padding: 5px;
+  padding: 0px;
   }
 
 
