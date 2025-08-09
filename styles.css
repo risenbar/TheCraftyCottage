@@ -186,6 +186,10 @@ article h2 {
     margin-right: 10px;
   }
 
+  a {
+  text-decoration: underline;
+  }
+
   article {
     grid-column: span 2;
   }
@@ -249,14 +253,18 @@ video{
 }
 @media screen and (max-width: 580px) {
 
-/* page header logo - all pages not used yet - logo class removed from index
+/* page header logo - all pages not used yet - logo class removed from index*/
 header {             
     font-size: 0.75em;  
   }
 
-  .logo{
+  /*.logo{
     max-height: 30%;
   }*/
+
+  span p{
+  font-size: 1em;  
+}
   
   nav {
     font-size: 1.1em;
@@ -269,6 +277,10 @@ header {
 
 aside{
  font-size: 1.1em;
+  }
+
+  a {
+  text-decoration:underline;
   }
 
  .wrapper {
