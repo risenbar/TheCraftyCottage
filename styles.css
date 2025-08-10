@@ -31,11 +31,12 @@ body {
 
 ul, li {                /*links to gallery pages*/
   padding: 0;
+ 
   }
   
-  li::before{
+  /*li::before{
     content:"\1F33B"; 
-  }
+  }*/
 
 a {
   text-decoration: none;
