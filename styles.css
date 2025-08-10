@@ -43,13 +43,13 @@ a {
 a:hover{ 
     font-size: 1.1em;
     font-weight: bold;   
-    color: deeppink; 
+    /*color: deeppink;*/ 
   }
 
 
 .grid-container {       /*main page grid*/
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 2fr 3fr 2fr;
   column-gap: 30px;
   }
 
@@ -107,20 +107,23 @@ nav {
   }
 
 
-nav li {
+/*nav li {*/
   /*text-decoration: none;*/
-  list-style-type: "\1F33B"; /* Now is \01F4CD pushpin \1F449 hand emoji*/
-  }
+  /*list-style-type: "\1F33B";              Now is \01F4CD pushpin \1F449 hand emoji*/
+  /*}*/
 
 
 article {
   padding: 0px;
+ 
   }
 
 
 aside {
   padding: 30px;
   border-left: 1px solid #ddd;
+  font-size: 1.0em;  
+  /*text-align: center;*/
   }
 
 
@@ -181,7 +184,7 @@ article h2 {
     border-bottom: 1px solid #ddd;
   }
 
-  nav li {
+  nav a {
     display: inline-block;
     margin-right: 10px;
   }
@@ -194,9 +197,9 @@ article h2 {
     grid-column: span 2;
   }
   aside {
-    padding: 16px;
-  }
+    padding: 16px;  }
 
+  
 .wrapper {
   max-width: 600px;  
   grid-template-columns: repeat(3, 1fr);
@@ -215,8 +218,7 @@ article h2 {
   aside {
     border-left: 0;
     border-top: 1px solid #ddd;
-  }
-
+  } 
 
   article h2 {
     font-size: 2.5em;
@@ -254,6 +256,7 @@ video{
 @media screen and (max-width: 580px) {
 
 /* page header logo - all pages not used yet - logo class removed from index*/
+
 header {             
     font-size: 0.7em;  
   }
@@ -274,14 +277,14 @@ header {
     font-size: 1.1em;
   }
 
-  .banner{                  /*text above video*/
+  .banner{       /*text above video*/
   font-size: 1.5em;
   text-align: center;
   }
 
 aside{
- font-size: 1.1em;
-  }
+ font-size: 1.0em;
+  }  
 
   a {
   text-decoration:underline;
@@ -302,4 +305,67 @@ aside{
   scale: 1.0;  
   } 
 
+}
+
+/******ACCORDIAN MENU CSS******/
+
+/* top level menu*/
+.menu {
+  width: 18rem;             /* width of top level menu*/
+  border-radius: 0.2rem;
+  font-size: 1.1rem;        /* font size top level menu*/        
+  font-weight: bold;        /* font weight top level menu*/
+  /*overflow: hidden;*/
+}
+
+/*remove anchor lines top level menu*/
+.menu a {                 
+  text-decoration: none;
+}
+
+/* top level menu items format - each category*/
+.menu-item {              
+  list-style: none;
+  border-top: 1px solid #4f7188;
+  overflow: hidden;
+}
+
+/* menu item button base format*/
+.btn {                  
+  display: block;
+  border-radius: 0.2rem;
+  padding: 1rem 1.2rem;
+  background-image: url(images/1Apage/craft2.png);
+  /*background:#e2afc3;*/
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+/*sub menu items format*/
+.menu-item__sub {
+  background: #d1f6ef;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+
+/*sub menu items anchor format*/
+.menu-item__sub a {           
+  display: block;
+  padding: 1rem 1.6rem;
+  color: rgb(0, 0, 0);      /*sub menu text color*/
+  font-size: 1.0rem;          /*sub menu font size*/
+  /*font-weight: bold;          sub menu font weightr*/
+  position: relative;
+  border-bottom: 1px solid #aae65d;
+}
+
+/*change color of sub menu items on hover*/
+.menu-item__sub a:hover {
+  background:#fdd1e2;
+}
+
+/*max height of sub section*/  
+.menu-item:target .menu-item__sub {
+  max-height: 30em;
 }
