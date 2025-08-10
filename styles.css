@@ -31,9 +31,11 @@ body {
 
 ul, li {                /*links to gallery pages*/
   padding: 0;
-  list-style-type: none;
   }
-
+  
+  li::before{
+    content:"\1F33B"; 
+  }
 
 a {
   text-decoration: none;
@@ -43,7 +45,7 @@ a {
 a:hover{ 
     font-size: 1.1em;
     font-weight: bold;   
-    /*color: deeppink;*/ 
+    color: deeppink; 
   }
 
 
@@ -308,64 +310,125 @@ aside{
 }
 
 /******ACCORDIAN MENU CSS******/
-
-/* top level menu*/
-.menu {
-  width: 18rem;             /* width of top level menu*/
-  border-radius: 0.2rem;
-  font-size: 1.1rem;        /* font size top level menu*/        
-  font-weight: bold;        /* font weight top level menu*/
-  /*overflow: hidden;*/
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 400px;
+  background-color: transparent;  
+  /*background-color: rgba(12, 11, 11, 0.786);*/
+  padding: 2em 1em;
+  border-radius: 10px;
+  height: 65%;
 }
 
-/*remove anchor lines top level menu*/
-.menu a {                 
-  text-decoration: none;
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 1em;
+  color: rgb(150, 3, 3);
 }
 
-/* top level menu items format - each category*/
-.menu-item {              
-  list-style: none;
-  border-top: 1px solid #4f7188;
-  overflow: hidden;
+.accordion-item {
+  text-align: center;
+  width: 90%;
 }
 
-/* menu item button base format*/
-.btn {                  
-  display: block;
-  border-radius: 0.2rem;
-  padding: 1rem 1.2rem;
-  background-image: url(images/1Apage/craft2.png);
-  /*background:#e2afc3;*/
-  color: rgb(0, 0, 0);
-  position: relative;
+.accordion-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  min-height: 1.5rem;
+  cursor: pointer;
 }
 
-/*sub menu items format*/
-.menu-item__sub {
-  background: #d1f6ef;
-  overflow: hidden;
-  transition: max-height 0.3s;
+.accordion-item-title {   /*category title*/
+  color: rgb(150, 3, 3);
+
+  font-size: 1.3rem;
+  font-weight:bold;
+  text-align: left;
+}
+
+.accordion-item-body {
   max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
 
-/*sub menu items anchor format*/
-.menu-item__sub a {           
-  display: block;
-  padding: 1rem 1.6rem;
-  color: rgb(0, 0, 0);      /*sub menu text color*/
-  font-size: 1.0rem;          /*sub menu font size*/
-  /*font-weight: bold;          sub menu font weightr*/
+.accordion-item-body-content {  /*sub menu titles*/
+  width: 80%;
+  /*padding-top: 1em;*/
+  color: black;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.icon {         /*plus sign icon*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: 2px solid;
+  width: 34px;
+  height: 34px;
+  color: rgb(150, 3, 3);
+  transition: color 0.25s;
   position: relative;
-  border-bottom: 1px solid #aae65d;
+  border-radius: 100%;
 }
 
-/*change color of sub menu items on hover*/
-.menu-item__sub a:hover {
-  background:#fdd1e2;
+.icon:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  background-color: black;
+  border-radius: 20px;
+  pointer-events: all;
+  transition: all 0.3s ease-in-out;
 }
 
-/*max height of sub section*/  
-.menu-item:target .menu-item__sub {
-  max-height: 30em;
+.icon:after {
+  content: "";
+  position: absolute;  
+  width: 2px;
+  height: 14px;
+  background-color: black;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
+
+/* JavaScript */
+.accordion-item-header.active > .icon::before {
+  transform: rotate(180deg);
+}
+
+.accordion-item-header.active > .icon::after {
+  transform: rotate(90deg);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 10px 0;
+  background-color:rgb(150, 3, 3);
+}
+
+/*remove later if no issues*/
+/*a {
+  color:black;
+  text-decoration: none;   
+}*/
+
+/*li {
+  list-style-type: none;
+}*/
+
+/*a:hover{
+  color:blue;
+  font-weight: bold; 
+}*/
