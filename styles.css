@@ -80,14 +80,15 @@ section {                 /*area for video*/
   align-content: center;
   height:60vh;
   width: auto;
-  margin-top: 5px;			
+  margin-top: 5px;
+  margin-bottom: 0;			
   background-position: center;
   background-repeat: no-repeat;	  	
   }
 
 
 .banner{                  /*text above video*/
-  font-size: 2em;
+  font-size: 1.7em;
   text-align: center;
   }
 
@@ -273,7 +274,7 @@ header {
   }
 
   span p{
-  font-size: 0.7em;
+  font-size: 1.0em;
   margin-bottom: 0.5em;
 }
   
@@ -282,7 +283,7 @@ header {
   }
 
   .banner{       /*text above video*/
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
   }
 
