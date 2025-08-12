@@ -416,6 +416,7 @@ aside{
 
 .divider {
   width: 100%;
+  margin: 10px 0 10px 0;
   height: 1px;
   margin: 10px 0 10px 0;
   background-color:rgb(150, 3, 3);
