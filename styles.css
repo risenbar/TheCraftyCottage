@@ -20,8 +20,9 @@
 
 /*page body - all pages*/   
 body { 
-  background-image: url(images/1Apage/craft2.png);     
-  margin: 0;
+  background-image: url(images/1Apage/craft2.png); 
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Times_Roman";
   font-size: 1.2em;
   /*overflow-y: hidden;*/
@@ -314,7 +315,7 @@ article h2 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(25, 200px);
+  grid-template-rows: repeat(25, 200px); /* individual pages have inline style limiting row count*/
   grid-gap: 20px;
   justify-items: stretch;
   align-items: stretch;
