@@ -126,7 +126,7 @@ span p{
 /*video alignment and clip path*/
 video{                  
   display: block;
-  margin: 0;
+  margin: 0;  
   /*clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);*/
   }
 
