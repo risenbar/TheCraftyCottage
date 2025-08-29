@@ -111,7 +111,8 @@ section {
 
   /*text above video*/
 .banner{                  
-  font-size: 1.7em;
+  font-size: 2em;
+  font-family: Script;
   text-align: center;
   }
 
