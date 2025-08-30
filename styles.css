@@ -118,8 +118,9 @@ section {
 
 
  /*text bekow video*/ 
-span p{
-  font-size: 1.2em;
+span p{  
+  font-size: 1.1em;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -221,7 +222,6 @@ a:hover{
   transition: max-height 0.3s ease-out;
 }
 
-
 /*sub menu titles*/
 .accordion-item-body-content {  
   width: 80%;
@@ -230,7 +230,6 @@ a:hover{
   text-align: left;
   font-size: 1.2rem;
 }
-
 
 /*plus sign icon*/
 .icon {         
@@ -279,6 +278,11 @@ a:hover{
 
 .accordion-item-header.active > .icon::after {
   transform: rotate(90deg);
+}
+
+.accordion-item-header:hover{
+  background-color: hsl(339, 53%, 85%);
+  border-radius: 20px;  
 }
 
 
@@ -472,7 +476,7 @@ aside{
 
 /*text under video*/
 span p{
-  font-size: 1.0em;
+  font-size: 0.8em;
   margin-bottom: 0.5em;
 }
 
